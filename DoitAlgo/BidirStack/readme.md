@@ -20,7 +20,7 @@
 상태에서 Pop을 하면, Out of range Error 발생(컴파일러 디버그 안잡힘)
 
 
-- IsEmpty 함수 오류로 보임.. 
+ - IsEmpty 함수 오류로 보임.. 
 
 
 ### 넣어야 할 기능
