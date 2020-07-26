@@ -1,4 +1,4 @@
-#양방향 스택(Bidirection Stack)
+# 양방향 스택(Bidirection Stack)
 
 
 1.flag를 바꾸어 앞 뒤로 Push&Pop 할 수 있도록 구현.
@@ -7,7 +7,7 @@
 2.Print, Search, Peek 제공.
 
 
-##잡아야 할 벌레들
+## 잡아야 할 벌레들
 
 
 1.Push 를 호출할때 , Data 를 입력하고 IsEmpty 판단을함.
@@ -23,7 +23,7 @@
 -IsEmpty 함수 오류로 보임.. 
 
 
-###넣어야 할 기능
+### 넣어야 할 기능
 
 
 -Push, Pop 하는 위치(인덱스) 출력하게 만들기.
