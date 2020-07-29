@@ -16,7 +16,7 @@ int Initialize(ArrayIntQueue *q, int m)
     q->num = 0;
 }
 
-int InQueue(ArrayIntQueue *q, int x)
+int EnQueue(ArrayIntQueue *q, int x)
 {
     if(q->max == q->num)
         return -1;
@@ -57,13 +57,13 @@ int main()
     Initialize(&aiq, 10);
     while(flag ==0)
     {
-        printf("(1) InQueue (2)Dequeue (3)Print (0)Exit:");
+        printf("(1) EnQueue (2)Dequeue (3)Print (0)Exit:");
         scanf("%d", &menu);
 
         switch (menu)
         {
         case 1:
-            printf("inqueue number:");
+            printf("Enqueue number:");
             scanf("%d", &temp);
             InQueue(&aiq,temp);
             break;
