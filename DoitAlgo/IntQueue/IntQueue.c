@@ -29,7 +29,7 @@ int Enque(IntQueue *q, int x)
 
 int Deque(IntQueue *q, int *x)
 {
-    if(IsEmpty(&q))
+    if(!IsEmpty(&q))
         return -1;
     else
     {
@@ -43,7 +43,7 @@ int Deque(IntQueue *q, int *x)
 
 int Peek(const IntQueue *q, int *x)
 {
-    if(IsEmpty(&q))
+    if(!IsEmpty(&q))
         return -1;
     *x = q->que[q->front];
     return 0;
@@ -57,7 +57,7 @@ void Clear(IntQueue *q)
     q->rear = 0; 
     
     for(i=0; i<q->max; i++)
-        q->que[i]=NULL;
+        q->que[i]=0;
 }
 
 int Capacity(const IntQueue *q)
@@ -72,7 +72,7 @@ int Size(const IntQueue *q)
 
 int IsEmpty(const IntQueue *q)
 {
-    if(q->num==0)
+    if(q->num == 0)
         return 1;
     else 
         return 0;
@@ -100,8 +100,8 @@ int Search(const IntQueue *q, int x)
 void Print(const IntQueue *q)
 {
     int i;
-    for(i=0; (i>=q->front) || (i>=q->rear); i++)
-        printf(" | %d | \n", q->que[i]);
+    for(i=0; i<q->num; i++)
+        printf(" | %d | \n", q->que[(i+q->front)%q->max]);
 }
 
 void Terminate(IntQueue *q)
@@ -113,13 +113,3 @@ void Terminate(IntQueue *q)
     q->rear = 0;
     q->num = 0;
 }
-
-
-
-
-
-
-
-
-
-
