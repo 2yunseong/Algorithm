@@ -12,7 +12,7 @@ using namespace std;
     9 : 57
 */
 
-int count[10];
+int yunseong[10];
 
 void show_array(const int a[], int n)
 {
@@ -23,33 +23,36 @@ void show_array(const int a[], int n)
 
 int book(int n)
 {
-    if(n==1)       //base condition
-    {
-        count[1]++;
-        return 0;        
-    }
-    else
-    {
-        string str;
-        str=to_string(n);    //change int -> string
-        for(int i=0; i<str.size(); i++)     //count 
-        {
-            int idx;
-            idx = str[i]-48;    //char ->int change 
-            count[idx]++;       
-        }
-        
-        book(n-1);
-    }  
+
 }
 
 int main()
 {
     int n=11000;
     book(n);
-    show_array(count, 10);
+    show_array(yunseong, 10);
     return 0;
 }
 
-//메모리 초과뜸.. 아마 변수 할당에서 문제가 되는듯 함.
-//동적할당으로 그때그때마다 해제해줄 것.
+//입력 값이 10억이므로 하나하나 다 조사하면 메모리 초과, 런타임 오류가 날 수 밖에 없음.
+//다른 알고리즘 고안.
+
+
+/*
+
+각각의 숫자가 나온 횟수를 저장하는 배열을 arr라 하자.
+
+또 변수가 t라고 하고, 각각의 자리n의 숫자의 수열을 a_n 이라고 하면,
+
+t = a\_(n-1) * 10^(n-1)+a\_(n-2)*10^(n-2) + ... + a\_0*10^0 
+점화식을 구해, 재귀적으로 풀어보자.
+
+n=1 일때, f(1) 의 내용은 다음과 같다.
+
+i=0부터 a_0까지 arr[i]+=(10^0);
+n=2 일때,
+
+f(1)호출
+i=0부터 a_1까지 arr[i]+=(a_0)
+
+*/
