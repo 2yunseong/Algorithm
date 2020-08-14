@@ -69,6 +69,7 @@ int main()
         else
             continue;
     }
+    
 
     //output
     if(same_flag==1)
