@@ -31,7 +31,7 @@ int main()
         for(int i=0; i<maxday; i++)
             cin>>cost[i];
 		
-		ShowArray(cost, maxday);
+
         //최소 평균 비용 구하기.
         for(int i=num_of_team; i<maxday+1; i++)  // [L,N+1)
         {
@@ -60,7 +60,7 @@ int main()
     }
 
     for(int i=0; i<aver_idx; i++)
-     cout<<average_cost_answer[i]<<endl;
+        printf("%.9f\n", average_cost_answer[i]);
      
     delete[] average_cost_answer;
     return 0;
@@ -72,4 +72,6 @@ int main()
     선언 했다.. 연산 상에 문제가 있는 줄 알고 20분을 삽질을 했다. 반복문 설계를 잘하는 연습을
     하자. 이거 오늘 안잡았으면 뭐가 문제인지 모르고 연등 끝낼 뻔 했다.
     -C++ 입출력 응용이 아직도 미흡하다. 연습 하도록 하자.
+    -문제를 잘 좀 읽자. 소수점 7자리 까지 출력이고 각 테스트케이스 결과를 개행해서 출력해야
+    하는데 다 간과해버렸다. 간단한건데 25분또 삽질.
 */
