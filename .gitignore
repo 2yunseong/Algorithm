@@ -1,6 +1,14 @@
+# execution file
 *.exe
-/.vscode
-/vscode
-/.DS_Store
-.exec
-.dSYMe
+*.dSYM/
+*.exec/
+
+
+# directory
+.vscode/
+vscode/
+
+
+# mac OS
+.DS_Store
+
