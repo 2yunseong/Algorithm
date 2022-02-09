@@ -18,6 +18,9 @@ https://www.acmicpc.net/user/dbsdltjd123
 - baekjoon
   - 백준 문제 풀이 아카이브
 
+- ndb
+  - [이것이 취업을 위한 코딩테스트다 with 파이썬] 예제 문제 풀이
+
 - Sorting
   - 각종 다양한 정렬 알고리즘 구현
   
