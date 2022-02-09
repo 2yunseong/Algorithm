@@ -1,4 +1,3 @@
-
 money = int(input())
 coinCount = 0
 
