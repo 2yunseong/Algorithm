@@ -1,4 +1,3 @@
-
 n, m = map(int, input().split())
 global_max = -1
 
