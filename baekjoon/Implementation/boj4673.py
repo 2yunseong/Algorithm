@@ -5,7 +5,6 @@ for i in range(1, 10001):
     target = str(i)
     for e in target:
         temp += int(e)
-
     if temp > 10000:
         continue
     else:
