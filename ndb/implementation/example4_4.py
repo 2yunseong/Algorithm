@@ -1,4 +1,4 @@
-from re import T
+from time import sleep
 
 
 def change_direction(current_direction):
@@ -9,7 +9,12 @@ def change_direction(current_direction):
 
 
 def back_direction(current_direction):
-    return 10
+    if current_direction == 0:
+        return 2
+    elif current_direction == 1:
+        return 3
+    else:
+        return current_direction - 2
 
 
 def set_next(a, b, direction):
@@ -39,10 +44,15 @@ next_b = 0
 n, m = map(int, input().split())
 a, b, direction = map(int, input().split())
 
-board = [[0] * m for _ in range(n)]
+board = []
 is_visited = [[0] * m for _ in range(n)]  # 0 :아직 안들림 1 : 들림
+
+
 for i in range(n):
     board.append(list(map(int, input().split())))
+
+is_visited[b][a] = 1
+count = count + 1
 
 while True:
     is_move = False
@@ -51,12 +61,27 @@ while True:
         next_a, next_b = set_next(a, b, direction)
         # 바다 거나, 들렸던 칸이면
         if board[next_b][next_a] == 1 or is_visited[next_b][next_a] == 1:
+            print("바다거나, 들렸던 칸임: [%d, %d]" % (next_b, next_a))
+            sleep(1)
             continue
         else:
+            print("방문: [%d, %d]" % (next_b, next_a))
+            sleep(1)
             count = count + 1
             a = next_a
             b = next_b
+            is_visited[next_b][next_a] = 1
             is_move = True
             break
-    if is_move == False & &
-    # 1. 방향 바꾸기
+    next_a, next_b = set_next(a, b, back_direction(direction))
+    if board[next_b][next_a] == 1:
+        break
+    elif is_move == False:
+        a = next_a
+        b = next_b
+        print("뒤로가기: [%d, %d]" % (next_b, next_a))
+        sleep(1)
+
+
+print(count)
+# 1. 방향 바꾸기
