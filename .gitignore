@@ -1,7 +1,7 @@
 # execution file
 *.exe
-*.dSYM/
-*.exec/
+*.dSYM
+*.exec
 
 
 # directory
