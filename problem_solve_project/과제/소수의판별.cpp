@@ -13,9 +13,9 @@ bool isPrime(int n)
     return true;
 }
 /*
-12 = a x b 로 나타낼 수 있다. (a,b 는 약수, a>=b)
-이 때, a는 sprt(12) 보다 클 수 없다.
-띠라서, 2 ~ sprt(n) 까지만 조사하면 된다.
+    12 = a x b 로 나타낼 수 있다. (a,b 는 약수, a>=b)
+    이 때, a는 sprt(12) 보다 클 수 없다.
+    띠라서, 2 ~ sprt(n) 까지만 조사하면 된다.
 */
 int main()
 {
