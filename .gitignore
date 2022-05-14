@@ -7,7 +7,7 @@
 # directory
 .vscode/
 vscode/
-
+jsTest/
 
 # mac OS
 .DS_Store
