@@ -8,7 +8,7 @@ bool isVisited[10] = {false}; // 인덱스가 아닌, 숫자로 접근한다.
 
 // 각 꼭짓점의 연결상태를 확인하는 함수
 // 해당 함수를 통해서 각 꼭짓점 끼리 연결될 수 있는지 확인한다.
-bool findVertexConnect(int start, int end){
+bool isVertexConnect(int start, int end){
     int calc = start + end;
     bool canConnect = false;
     if(calc == 4){
@@ -27,7 +27,7 @@ bool findVertexConnect(int start, int end){
 
 // 마주보는 변인지를 검사하는 함수
 // 마주보는 변끼리는 서로 더하면 10이 나오는 특성이 있다.
-bool findSideConnect(int start, int end){
+bool isSideConnect(int start, int end){
     int calc = start + end ;
     if(calc == 10){
         return true;
@@ -83,7 +83,7 @@ int main(){
             if(vertex.count(patterns[i]) > 0){
                 // 다른 꼭짓점을 지날 때는, 지나는 선이 이미 isVisited 가 true인지 확인해야 한다.
                 if(vertex.count(patterns[i+1]) > 0){
-                    if(findVertexConnect(patterns[i], patterns[i+1])){
+                    if(isVertexConnect(patterns[i], patterns[i+1])){
                         continue;
                     } else {
                         isPatternRight = false;
@@ -100,7 +100,7 @@ int main(){
                 // 마주 보는 변을 지나려면 반드시 mid 를 거쳐야 한다.
                 // 따라서, isVisited[5]가 false이면, 잘못된 패턴
                 if(side.count(patterns[i+1]) > 0){
-                    if(findSideConnect(patterns[i], patterns[i+1])){
+                    if(isSideConnect(patterns[i], patterns[i+1])){
                         if(!isVisited[mid]){
                             isPatternRight = false; // 표시
                             break;
