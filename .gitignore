@@ -3,6 +3,7 @@
 *.dSYM
 *.exec
 *.out
+input.txt
 
 # directory
 .vscode/
