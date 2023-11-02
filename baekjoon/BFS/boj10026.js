@@ -23,6 +23,16 @@ const blindBoard = board.map((rows) =>
   })
 );
 
+let bSector = 0;
+let sector = 0;
+const blindVisit = Array.from({ length: side }, () =>
+  Array.from({ length: side }, () => 0)
+);
+
+const visit = Array.from({ length: side }, () =>
+  Array.from({ length: side }, () => 0)
+);
+
 class Queue {
   list = [];
   left = 0;
@@ -39,75 +49,43 @@ class Queue {
   }
 }
 
-let bSector = 0;
-let sector = 0;
-const visited = Array.from({ length: side }, () =>
-  Array.from({ length: side }, () => 0)
-);
-
-const pureVisited = Array.from({ length: side }, () =>
-  Array.from({ length: side }, () => 0)
-);
-
 function isVRange(i, j) {
   return i >= 0 && j >= 0 && i < side;
 }
 
-// blind Range
-for (let i = 0; i < side; i++) {
-  for (let j = 0; j < side; j++) {
-    if (isVRange(i, j) && visited[i][j] === 0) {
-      const bQ = new Queue();
-      const initChar = blindBoard[i][j];
-      bQ.enQ([i, j]);
-      visited[i][j] = 1;
-      while (bQ.length) {
-        const [curI, curJ] = bQ.deQ();
+function dfs(i, j, bor, vis) {
+  const q = new Queue();
+  const initChar = bor[i][j];
+  q.enQ([i, j]);
+  vis[i][j] = 1;
+  while (q.length) {
+    const [curI, curJ] = q.deQ();
 
-        for (let v = 0; v < 4; v++) {
-          const newI = curI + posI[v];
-          const newJ = curJ + posJ[v];
+    for (let v = 0; v < 4; v++) {
+      const newI = curI + posI[v];
+      const newJ = curJ + posJ[v];
 
-          if (
-            isVRange(newI, newJ) &&
-            visited[newI][newJ] === 0 &&
-            blindBoard[newI][newJ] === initChar
-          ) {
-            visited[newI][newJ] = 1;
-            bQ.enQ([newI, newJ]);
-          }
-        }
+      if (
+        isVRange(newI, newJ) &&
+        vis[newI][newJ] === 0 &&
+        bor[newI][newJ] === initChar
+      ) {
+        vis[newI][newJ] = 1;
+        q.enQ([newI, newJ]);
       }
-      bSector += 1;
     }
   }
 }
 
 for (let i = 0; i < side; i++) {
   for (let j = 0; j < side; j++) {
-    if (isVRange(i, j) && pureVisited[i][j] === 0) {
-      const q = new Queue();
-      const initChar = board[i][j];
-      q.enQ([i, j]);
-      pureVisited[i][j] = 1;
-      while (q.length) {
-        const [curI, curJ] = q.deQ();
-
-        for (let v = 0; v < 4; v++) {
-          const newI = curI + posI[v];
-          const newJ = curJ + posJ[v];
-
-          if (
-            isVRange(newI, newJ) &&
-            pureVisited[newI][newJ] === 0 &&
-            board[newI][newJ] === initChar
-          ) {
-            pureVisited[newI][newJ] = 1;
-            q.enQ([newI, newJ]);
-          }
-        }
-      }
+    if (isVRange(i, j) && visit[i][j] === 0) {
+      dfs(i, j, board, visit);
       sector += 1;
+    }
+    if (isVRange(i, j) && blindVisit[i][j] === 0) {
+      dfs(i, j, blindBoard, blindVisit);
+      bSector += 1;
     }
   }
 }
