@@ -1,0 +1,15 @@
+{
+  "name": "테스트",
+  "price": "15000",
+  "sellerId": "11",
+  "brand": "빙글",
+  "detail": "",
+  "score": "110",
+  "link": "-",
+  "standardSize": "XXL",
+  "categories": {
+    "styleIds": [8],
+    "primaryCategoryId": 1,
+    "secondaryCategoryId": 1
+  }
+}

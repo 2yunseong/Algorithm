@@ -1,0 +1,40 @@
+{
+  "id": 16289,
+  "status": "재고없음",
+  "detailedStatus": {
+    "statusType": "ProductStatus",
+    "name": "OUT_OF_STOCK",
+    "localizedName": "재고없음"
+  },
+  "styleIds": [1],
+  "categories": {
+    "primaryCategoryId": 2,
+    "secondaryCategoryId": 8
+  },
+  "name": "체크 가오리핏 셔츠",
+  "price": 8800,
+  "sellerId": 19,
+  "seller": {
+    "id": 19,
+    "name": "빙그레(RE)",
+    "summary": "믿을 수 있는 국내, 수입 빈티지 쇼핑몰",
+    "profileImage": "https://github.com/cosmos-official/vingle-frontend/assets/39221443/ffa5fcfc-e340-4937-a889-36506c99f121"
+  },
+  "brand": "Helm",
+  "standardSize": "FREE",
+  "score": 0,
+  "mainImageUrl": "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/794e7455-cd29-48fc-bca8-e0585cf10f5d--1534416055",
+  "detailImageUrls": [
+    "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/ed2e984c-7356-46c8-9616-3169f8aa610b--1534416055",
+    "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/aaa7ba27-eac7-4395-823e-8cf1f11c3b03--1533492534",
+    "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/801cf0fc-aedd-4c21-a0c2-70ee5cb3f0c4--1532569013",
+    "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/6a04ae27-27da-4a4e-ae77-4823db9b6e04--1531645492",
+    "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/c41eacef-2c2e-4ef3-aee1-2edd1926e5fb--1530721971"
+  ],
+  "detail": "",
+  "link": "-",
+  "views": 9,
+  "impressions": 27,
+  "createdAt": "2024-08-20T17:02:22",
+  "updatedAt": "2024-08-20T17:20:04"
+}

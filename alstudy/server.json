@@ -1,0 +1,40 @@
+{
+  "id": 15449,
+  "status": "판매중",
+  "detailedStatus": {
+    "statusType": "ProductStatus",
+    "name": "SALE",
+    "localizedName": "판매중"
+  },
+  "styleIds": [7],
+  "categories": {
+    "primaryCategoryId": 2,
+    "secondaryCategoryId": 9
+  },
+  "name": "퓨마 폴리 스포츠 반팔 티셔츠 여자 L",
+  "price": 19200,
+  "sellerId": 13,
+  "seller": {
+    "id": 13,
+    "name": "빈티지톡",
+    "summary": "믿을 수 있는 국내, 수입 빈티지 쇼핑몰",
+    "profileImage": "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/logo.png"
+  },
+  "brand": "PUMA",
+  "standardSize": "L",
+  "score": 1231,
+  "mainImageUrl": "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/573a5d8f-93aa-4d62-b3c8-95c6eecc8032--385253758",
+  "detailImageUrls": [
+    "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/c747dd5a-a360-493f-af20-ed2405901562-259938932",
+    "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/983bc1c7-84cf-4e2e-a8f7-f55e1e511c66--1914743092",
+    "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/454f626b-54cc-4fe3-aa88-8aadbc6fb448--385253758",
+    "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/ccb68291-f651-47f4-bd67-b8b142484602-1830596368",
+    "https://vingle-s3.s3.ap-northeast-2.amazonaws.com/product/unhashed/5c6b43a5-25e0-4ad1-9f76-2b754b2f7c4d--57186854"
+  ],
+  "detail": "빈티지톡 상품 상세 정보\n\n브랜드 : PUMA\n\n 상품명 : 스포츠 반팔 티셔츠 \n\n수입국가 : JPN\n\n소재 : 폴리 ( 상품 하단 택 이미지 참조 )\n\n제품 상태 : 제품사진 외에 특별히 오염, 데미지 없는 상태\n\n실측사이즈 단면 (cm)\n\n어깨 : 25 가슴 : 37 소매 : 15 총기장 : 62\n\n사이즈 : 여자 L\n\n빈티지 브랜드 구제 의류마다 표기사이즈와 실측사이즈가 다르니, 구매전 실측 사이즈를 비교 후 구매하시면 정확한 사이즈를 구매를 할수있습니다. \n\n사이즈는 재는 방법에 따라 1~2cm 정도 오차가 있을수 있습니다.",
+  "link": "https://vintagetalk.co.kr/product/%ED%93%A8%EB%A7%88-%ED%8F%B4%EB%A6%AC-%EC%8A%A4%ED%8F%AC%EC%B8%A0-%EB%B0%98%ED%8C%94-%ED%8B%B0%EC%85%94%EC%B8%A0-%EC%97%AC%EC%9E%90-l/1058954/category/2459/display/1/",
+  "views": 364,
+  "impressions": 8337,
+  "createdAt": "2024-08-13T19:31:21",
+  "updatedAt": "2024-08-20T17:24:10"
+}
